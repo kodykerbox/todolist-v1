@@ -13,6 +13,8 @@ let items = ["Buy Food", "Prepare Food", "Cook Food", "Eat Food"];
 // set an empty array for new work items
 let workItems = ["Show Up", "Get Settled"];
 
+let funItems = ["Surf", "Play Video Games"]
+
 // set EJS as the viewing engine to display html
 app.set('view engine', 'ejs');
 
@@ -39,11 +41,20 @@ app.post("/", function(req, res) {
     
     // code allows items to be added to the regular list and work list
     let item = req.body.newItem;
+
+    let funItems = ["Surf", "Play Video Games"]
     
     if (req.body.list === "Work") {
         workItems.push(item);
         res.redirect("/work");
-    } else {
+     } 
+    
+    else if (req.body.list === "Fun") {
+        funItems.push(item);
+        res.redirect("/fun");
+     } 
+
+    else {
         items.push(item);
         res.redirect("/");
     }
