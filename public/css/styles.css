@@ -1,6 +1,6 @@
 html {
-  background-color: #E4E9FD;
-  background-image: -webkit-linear-gradient(65deg, rgb(252, 0, 0)#E4E9FD 50%);
+  background-color: rgb(228, 230, 238);
+  background-image: -webkit-linear-gradient(65deg, rgb(252, 0, 0) #E4E9FD 50%);
   min-height: 1000px;
   font-family: 'Verdana';
 }
